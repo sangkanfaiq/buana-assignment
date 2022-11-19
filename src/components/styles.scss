@@ -1,0 +1,17 @@
+.navbar {
+  background: #9ba17b;
+  .logo {
+    display: flex;
+    align-items: center;
+    img {
+      width: 200px;
+      height: 150px;
+      margin-top: -2em;
+    }
+    h1 {
+        font-size: 25px;
+        font-weight: 600;
+        margin-left: -1em;
+    }
+  }
+}
