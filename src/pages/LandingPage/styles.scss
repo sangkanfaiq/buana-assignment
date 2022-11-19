@@ -1,6 +1,8 @@
+$light: var(--bg-light);
+$dark: var(--bg-dark);
+
 .landingpage {
-  margin-top: 5em;
-  background: #fcfdf2;
+  background: $dark;
 
   .search-bar {
     display: flex;
@@ -8,41 +10,59 @@
     justify-content: center;
 
     .search {
+      margin-top: 5em;
       width: 40%;
       padding: 0.2em;
-      border: 1px solid #999;
+      border: 1px solid $light;
       border-radius: 5px;
 
       input {
         outline: none;
+        background: transparent;
         width: 94%;
+        color: $light;
         font-size: 12px;
         font-weight: 500;
+        letter-spacing: 0.5px;
         margin-left: 0.5em;
         height: 30px;
         border: none;
+
+        &::placeholder {
+          color: $light;
+        }
+      }
+      .search-icon {
+        color: $light;
+        font-size: 18px;
       }
     }
   }
 
   .cards-area {
+    margin-top: 5em;
     gap: 1em;
+    background: #393e46;
+    border-radius: 5px;
 
     .cards {
       margin: 3em 0;
       display: flex;
-      // flex-direction: column;
-      height: 24em;
+      padding: 1em;
 
       .imgBox {
-        width: 45em;
-        height: 20em;
+        width: 20em;
+        height: 15em;
+        padding: 3px;
+        border: 1px solid $light;
+        border-radius: 5px;
 
         img {
           width: 100%;
           height: 100%;
+          object-fit: cover;
+          border-radius: 5px;
         }
-
       }
 
       .details {
@@ -51,56 +71,94 @@
 
         h5 {
           font-size: 28px;
+          font-weight: 700;
+          color: $light;
         }
 
-        p {
-          font-size: 16px;
-          line-height: 24px;
-          color: #444;
-
-          &:nth-child(3) {
+        .info {
+          display: flex;
+          justify-content: space-between;
+          p {
             font-size: 16px;
-            font-style: italic;
+            line-height: 24px;
+            color: $light;
+
+            &:nth-child(3) {
+              font-size: 14px;
+              letter-spacing: 0.5px;
+              font-style: italic;
+            }
+          }
+          .inf-left {
+            width: 75%;
+          }
+          .inf-right {
+            h3 {
+              font-size: 22px;
+              color: $light;
+              font-weight: 500;
+            }
+            p {
+              font-weight: 500;
+              font-size: 14px;
+            }
           }
         }
       }
-      button {
-        margin-top: 0.5em;
-        padding: 5px 2em;
-        border: none;
-        outline: none;
-        font-size: 14px;
-        font-weight: 500;
-        background-color: #a4be7b;
+      .button {
+        button {
+          margin-top: 0.5em;
+          padding: 5px 1em;
+          border: none;
+          display: flex;
+          align-items: center;
+          color: var(--bg-dark);
+          border-radius: 5px;
+          outline: none;
+          font-size: 14px;
+          font-weight: 500;
+          background-color: #f6f6c9;
+
+          .icons {
+            font-size: 14px;
+            margin-left: 1.5em;
+          }
+        }
       }
 
       .details-area.active {
         display: block;
+        margin-top: 1em;
       }
       .details-area {
         display: none;
         .details {
           display: flex;
           justify-content: space-between;
-          .left {
-            p {
-              font-size: 14px;
-              font-style: normal;
-            }
-          }
-          .center {
-            p {
-              font-size: 14px;
-              font-style: normal;
-            }
-          }
-          .right {
-            p {
-              font-size: 14px;
-              font-style: normal;
-            }
+          align-items: center;
+          padding: 1em;
+          margin: 0;
+          color: #fff;
+          background: #393e46;
+          border: 1px solid $light;
+          border-radius: 10px;
+          p {
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            margin: 1.5em 0;
           }
         }
+      }
+    }
+    .line {
+      display: flex;
+      justify-content: center;
+
+      .v-line {
+        width: 97%;
+        height: 1px;
+        background: #999;
       }
     }
   }

@@ -1,0 +1,81 @@
+@media screen and (max-width: 768px) {
+    .landingpage {
+        .search-bar {
+            .search {
+                width: 80%;
+
+                input {
+                    width: 90%;
+                }
+            }
+        }
+
+        .cards-area {
+            .cards {
+                flex-direction: column;
+                align-items: center;
+
+                .imgBox {
+                    width: 100%;
+                }
+
+                .details {
+                    margin-top: 1em;
+                    margin-left: 0;
+                    h5 {
+                        font-size: 24px;
+                    }
+
+                    .info {
+                        flex-direction: column;
+
+                        p {
+                            font-size: 12px;
+
+                            &:nth-child(3) {
+                                font-size: 12px;
+                            }
+                        }
+
+                        .inf-left {
+                            width: 100%;
+                        }
+                        .inf-right {
+                            display: flex;
+                            justify-content: space-evenly;
+
+                            h3 {
+                                font-size: 18px;
+                            }
+                            p {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+
+                .button {
+                    display: flex;
+                    width: 100%;
+                    justify-content: center;
+
+                    button {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 40%;
+                    }
+
+                }
+
+                .details-area {
+                    .details {
+                        p {
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
