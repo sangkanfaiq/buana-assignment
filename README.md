@@ -41,7 +41,14 @@ Website to see all cat breeds made with React JS
 
 Get started with this project, intructions on setting up your project locally.<br />
 To get a local copy up and running follow these simple steps.
+
+- env
+```sh
+REACT_APP_API_URL = https://api.thecatapi.com/v1/breeds
+```
+
 ### Prerequisites
+
 
 Before installing, you must install [node js](https://nodejs.org) and [yarn](https://yarnpkg.com/getting-started/install)</br>
 and allow current lcation
@@ -57,11 +64,7 @@ git clone https://github.com/sangkanfaiq/buana-assignment.git
 ```sh
 yarn install
 ```
-3. env
-```sh
-REACT_APP_API_URL = https://api.thecatapi.com/v1/breeds
-```
-4. Start the project
+3. Start the project
 ```sh
 yarn start
 ```
