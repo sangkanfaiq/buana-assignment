@@ -12,7 +12,7 @@ import {Data} from './data'
 const Loading = () => {
   return (
     <>
-      <div className="d-flex justify-content-center" style={{height: '100px', width: '100%'}}>
+      <div className="d-flex justify-content-center" style={{marginBottom: '1em'}}>
         <div className="spinner-border text-info" role="status">
           <span className="visually-hidden">Loading...</span>
         </div>
@@ -105,7 +105,7 @@ const LandingPage = () => {
                       border: "none",
                       outline: "none",
                     }}
-                    // disabled={!data.hasNextPage || data.isFetchingNextPage}
+                    disabled={!data.hasNextPage || data.isFetchingNextPage}
                   >
                     {data.isFetchingNextPage ? (
                       <Loading />
@@ -118,7 +118,7 @@ const LandingPage = () => {
                 </div>
                 <div>
                   {data.isFetching && !data.isFetchingNextPage ? (
-                    <div className="d-flex justify-content-center">
+                    <div className="d-flex justify-content-center" style={{height: '200px'}}>
                       <p style={{ color: "#fff", fontSize: '14px' }}>Updating...</p>
                     </div>
                   ) : null}
