@@ -1,6 +1,7 @@
 @media screen and (max-width: 768px) {
     .landingpage {
         .search-bar {
+            margin-top: 0;
             .search {
                 width: 80%;
 
@@ -70,8 +71,10 @@
 
                 .details-area {
                     .details {
+                        padding: 10px;
                         p {
                             font-size: 10px;
+                            font-weight: 400;
                         }
                     }
                 }

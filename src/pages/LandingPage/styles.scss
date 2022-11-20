@@ -5,12 +5,12 @@ $dark: var(--bg-dark);
   background: $dark;
 
   .search-bar {
+    margin-top: -6em;
     display: flex;
     align-items: center;
     justify-content: center;
 
     .search {
-      margin-top: 5em;
       width: 40%;
       padding: 0.2em;
       border: 1px solid $light;
@@ -100,6 +100,7 @@ $dark: var(--bg-dark);
             }
             p {
               font-weight: 500;
+              color: lightgray;
               font-size: 14px;
             }
           }

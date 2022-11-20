@@ -19,3 +19,16 @@ export const fetchData = async (limit, page) => {
         return Promise.reject(error)
     }
 }
+
+export const searchData = async (search) => {
+    try {
+        const response = await axios.get(`${API_URL}/search?q=${search}`)
+        const data = {
+            data:response.data,
+            hasMore:false
+        }
+        return Promise.resolve(data)
+    } catch (error) {
+        return Promise.reject(error)
+    }
+}
