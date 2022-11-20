@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./styles.scss";
 import "./mobile.scss";
-import Navbar from "../../components/navbar";
+import Navbar from "../../components/Navbar";
 import { FiSearch } from "react-icons/fi";
 import { fetchData, searchData } from "../../helpers/service/data.service";
 import { useInfiniteQuery } from "@tanstack/react-query";
