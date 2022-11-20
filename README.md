@@ -37,7 +37,7 @@ Website to see all cat breeds made with React JS
 - SASS
 - Bootstrap
 - Axios
-- Dotenv
+- dotenv
 
 ### Screenshoot
 | Website | Mobile |
@@ -45,7 +45,7 @@ Website to see all cat breeds made with React JS
 | <a href="https://drive.google.com/uc?export=view&id=1zyjgLC1vntf-zQ3kSmaRVDlyY-8qswIW"><img src="https://drive.google.com/uc?export=view&id=1zyjgLC1vntf-zQ3kSmaRVDlyY-8qswIW" style="width: 350px; max-width: 100%; height: auto" title="Click to enlarge picture" /> | <a href="https://drive.google.com/uc?export=view&id=1coz__CMnCHA_W33hvqbIR3UJXAr_pLGA"><img src="https://drive.google.com/uc?export=view&id=1coz__CMnCHA_W33hvqbIR3UJXAr_pLGA" style="width: 350px; max-width: 100%; height: auto" title="Click to enlarge picture" />
 
 ### Demo
-Here's the URL link Site, [Click here](https://buana-assignment.netlify.app/)
+Here's the URL link site, [Click here](https://buana-assignment.netlify.app/)
 
 ## Getting Started
 
@@ -60,8 +60,7 @@ REACT_APP_API_URL = https://api.thecatapi.com/v1/breeds
 ### Prerequisites
 
 
-Before installing, you must install [node js](https://nodejs.org) and [yarn](https://yarnpkg.com/getting-started/install)</br>
-and allow current lcation
+Before installing, you must install [node js](https://nodejs.org) and [yarn](https://yarnpkg.com/getting-started/install)
 
 ### Installation
 
