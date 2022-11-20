@@ -24,16 +24,30 @@ const Level = ({ item, name }) => {
   );
 };
 
+const Loading = () => {
+  return (
+    <>
+      <div className="d-flex justify-content-center" style={{height: '100px'}}>
+        <div className="spinner-border text-info" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    </>
+  );
+};
+
 const LandingPage = () => {
   const { ref, inView } = useInView();
   const [openDetails, setOpenDetails] = useState([]),
-  [search,setSearch] = useState()
+    [search, setSearch] = useState();
 
   const data = useInfiniteQuery(
-    ["getAllData",search],
+    ["getAllData", search],
     async ({ pageParam = 0 }) => {
-      let response
-      !search ? response = await fetchData(10, pageParam) : response = await searchData(search)
+      let response;
+      !search
+        ? (response = await fetchData(10, pageParam))
+        : (response = await searchData(search));
       return response;
     },
     {
@@ -59,8 +73,6 @@ const LandingPage = () => {
     }
   };
 
-
-
   return (
     <>
       <Navbar />
@@ -84,22 +96,32 @@ const LandingPage = () => {
             </div>
           </div>
           <div className="cards-area">
-            {!data.isLoading ?
+            {!data.isLoading ? (
               data.data?.pages?.map((page) => {
                 return page.data.map((item, index) => {
                   return (
                     <>
                       <div className="cards" key={index}>
-                           <div className="imgBox">
-                           <img src={`https://cdn2.thecatapi.com/images/${item.reference_image_id}.jpg`} alt={item.name} />
-                         </div>
+                        <div className="imgBox">
+                          <img
+                            src={`https://cdn2.thecatapi.com/images/${
+                              item.reference_image_id
+                            }.jpg` || `https://cdn2.thecatapi.com/images/${
+                              item.reference_image_id
+                            }.png`}
+                            
+                            alt={item.name}
+                            title={item.name}
+                          />
+                        </div>
 
                         <div className="details">
                           <div className="info">
                             <div className="inf-left">
                               <h5>
-                                {item.name} {`(${item.origin})`}
+                                {item.name}
                               </h5>
+                              <h4>Origin : {item.origin}</h4>
                               <p>{item.description}</p>
                               <p>{item.temperament}</p>
                             </div>
@@ -193,31 +215,41 @@ const LandingPage = () => {
                     </>
                   );
                 });
-              }):(
-                <div>loading...</div>
-              )}
-              {!search?(<>
+              })
+            ) : (
+              <Loading />
+            )}
+            {!search ? (
+              <>
                 <div>
-              <button
-                ref={ref}
-                onClick={() => data.fetchNextPage()}
-                disabled={!data.hasNextPage || data.isFetchingNextPage}
-              >
-                {data.isFetchingNextPage
-                  ? "Loading more..."
-                  : data.hasNextPage
-                  ? "Load More"
-                  : "Nothing more to load"}
-              </button>
-            </div>
-            <div>
-              {data.isFetching && !data.isFetchingNextPage
-                ? "Background Updating..."
-                : null}
-            </div>
+                  <button
+                    ref={ref}
+                    onClick={() => data.fetchNextPage()}
+                    style={{
+                      background: "transparent",
+                      border: "none",
+                      outline: "none",
+                    }}
+                    // disabled={!data.hasNextPage || data.isFetchingNextPage}
+                  >
+                    {data.isFetchingNextPage ? (
+                      <Loading />
+                    ) : data.hasNextPage ? (
+                      <Loading />
+                    ) : (
+                      ""
+                    )}
+                  </button>
+                </div>
+                <div>
+                  {data.isFetching && !data.isFetchingNextPage ? (
+                    <div className="d-flex justify-content-center">
+                      <p style={{ color: "#fff", fontSize: '14px' }}>Updating...</p>
+                    </div>
+                  ) : null}
+                </div>
               </>
-              ): null}
-            
+            ) : null}
           </div>
         </div>
       </div>
