@@ -23,9 +23,9 @@ Website to see all cat breeds made with React JS
 
 ### Feature
 - Get All Cat Breeds
-- Get Cat Details
+- Get Cat Details (Expand and Collapse)
 - Infinite Scroll
-- Search cat breeds
+- Search Cat Breeds by Name
 
 ### Author
 [Sangkan Faiq](https://github.com/sangkanfaiq)
